@@ -144,6 +144,6 @@ The Personal Finance Manager is a web application designed to help users track t
      "amount": "number",
      "date": "ISODate",
      "description": "string",
-     "type": "string" // "credit" or "debit"
+     "type": "string" 
    }
    ```
