@@ -41,7 +41,6 @@ The Personal Finance Manager is a web application designed to help users track t
    - **Settings:**
      - User Profile Component
      - Bank Account Integration Component
-
 2. **Backend (Express.js):**
    - **Authentication Routes:**
      - `/api/auth/login` (POST)
@@ -75,3 +74,76 @@ The Personal Finance Manager is a web application designed to help users track t
      },
      "bankAccounts": ["ObjectId"]
    }
+   ```
+
+2. **Expense:**
+   ```json
+   {
+     "id": "ObjectId",
+     "userId": "ObjectId",
+     "amount": "number",
+     "category": "string",
+     "date": "ISODate",
+     "description": "string"
+   }
+   ```
+
+3. **Income:**
+   ```json
+   {
+     "id": "ObjectId",
+     "userId": "ObjectId",
+     "amount": "number",
+     "source": "string",
+     "date": "ISODate",
+     "description": "string"
+   }
+   ```
+
+4. **Budget:**
+   ```json
+   {
+     "id": "ObjectId",
+     "userId": "ObjectId",
+     "category": "string",
+     "amount": "number",
+     "startDate": "ISODate",
+     "endDate": "ISODate"
+   }
+   ```
+
+5. **Goal:**
+   ```json
+   {
+     "id": "ObjectId",
+     "userId": "ObjectId",
+     "name": "string",
+     "amount": "number",
+     "targetDate": "ISODate",
+     "description": "string"
+   }
+   ```
+
+6. **BankAccount:**
+   ```json
+   {
+     "id": "ObjectId",
+     "userId": "ObjectId",
+     "bankName": "string",
+     "accountNumber": "string",
+     "balance": "number",
+     "transactions": ["ObjectId"]
+   }
+   ```
+
+7. **Transaction:**
+   ```json
+   {
+     "id": "ObjectId",
+     "bankAccountId": "ObjectId",
+     "amount": "number",
+     "date": "ISODate",
+     "description": "string",
+     "type": "string" // "credit" or "debit"
+   }
+   ```
